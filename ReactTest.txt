@@ -1,0 +1,120 @@
+IN YOUR OWN WORDS!!
+
+1) What is React.js, and what makes it different from other framework/libraries like angular.js?
+
+------ React.js a comprehensive JavaScript library for building user interfaces,
+React is a library developed by Facebook that has revolutionized the way we think about apps.
+------  Angular is one of the most popular javascript frameworks and like other similar software suits it offers multiple out-of-the-box solutions and designs.
+ At a time when, React ecosystem comprises any number of composable,
+targeted online tools and ReactJS acts as one of the building blocks
+------Disadvantages of angularjs
+Despite a comprehensive and clear manual, steep learning curve and complexity are named among the main weak points of Angular.js. Like any other client-side rendering technology in javascript framework comparison list, programmers should place special emphasis on security to make apps reliable and safe. Though, with introduction of Angular Universal and pre-rendering option in ng2 this issue was defused.
+------Disadvantages of react.js
+Comparing react vs angular performance,
+ first of all it’s worth mentioning that reactJS is not a full-scale framework and for this very
+  reason integration of the UI library into a common MVC framework requires deeper programming knowledge.
+   It is still young and not mature, considering tutorial volumes, limited ecosystem, etc.
+Apart from pros and cons of reactjs, we should also mention Flux that is frequently applied for adding a struct
+
+
+
+2) In JSX, we can't use the "class" keyword. Why?
+
+-------  React uses className instead of the traditional DOM class. From the docs,
+ "Since JSX is JavaScript, identifiers such as class and for are discouraged as XML attribute names.
+ Instead, React DOM components expect DOM property names like className and htmlFor, respectively."
+
+
+
+3)  Please provide a brief explanation of the virtual DOM.
+
+------- In React, for every DOM object, there is a corresponding "virtual DOM object."
+A virtual DOM object is a representation of a DOM object, like a lightweight copy.
+A virtual DOM object has the same properties as a real DOM object,
+but it lacks the real thing's power to directly change what's on the screen.
+Manipulating the DOM is slow. Manipulating the virtual DOM is much faster,
+because nothing gets drawn onscreen. Think of manipulating the virtual DOM as editing a blueprint,
+as opposed to moving rooms in an actual house.
+
+
+
+4) What is the difference between props and state?
+
+------ The difference between them is equivalent to the difference
+between private variables (corresponding to state)
+and function arguments (the function corresponds to the React object;
+the arguments correspond to props). Objects can behave differently depending on their props and state,
+ but we want them self-contained enough to behave more than just glorified data holders.
+
+
+5) How do you update a component's state?
+
+------this.setState
+
+6) What happens when state changes?
+
+------An update can be caused by changes to props or state.
+
+7) What is componentDidMount and how do you use it?
+
+-------------componentDidMount is executed after first render only on the client side.
+ This is where AJAX requests and DOM or state updates should occur.
+
+
+8) What part of MVC is react most concerned with?
+
+-------- It does this by separating the application into three parts: the model, the view, and the controller
+It can respond to requests for information, respond to instructions to
+ Because MVC is about creating a clear separation of concerns
+ And the more connections exist between those components
+
+9) What are Prop Types and what good are they?
+
+------- Runtime type checking for React props and similar objects
+passed to your components against those definitions, and warn in development if they don't match.
+
+
+
+10) Write a basic "Hello 'somename' " component in which you pass the name in as a prop. somename is a variable.
+
+------- Write a basic "Hello 'somename' " component in which you pass the name in as a prop. somename is a variable.
+        function Example(props){
+            return(
+                <div>
+                    <p>Hello<p>
+                    {this.props.somename}
+                </div>
+            );
+
+        }
+
+11) When would you use a class component over a functional component.
+
+
+--------- Three ways to describe React components which are often used incorrectly
+ class Repos extends React an array of repositories of a specific user,
+  maps over those repositories,  you can simply create your component as a Stateless Functional
+
+12) Why are keys important in React and what are they?
+
+-------- Keys should be given to the elements inside the array to give the elements a stable identity:
+
+
+
+13) In which lifecycle method is it a good idea to make Ajax calls?
+
+---------- Through lifecycle methods, we can then control what happens when each tiny section For example, if you use Firebase for your app, you'll need to get that set up as your ... You may see people using componentWillMount to start AJAX calls to load data for your components
+Good job, little component.
+
+14) How do you tell React to build in production mode?
+
+
+------- write in package json "build": "NODE_ENV='production' webpack -p"
+
+15) What is wrong with the following code?
+
+this.setState((prevState, props) => {
+ return {
+   streak: prevState.streak + props.count
+ }
+})
